@@ -1,0 +1,7 @@
+**/.vscode
+**/.idea
+Automation/SynApp.app
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+user_data/**
