@@ -164,6 +164,9 @@ class MuseStreamer:
         recording["timestamps"] = timestamps
         recording.set_index("timestamps", drop=True, inplace=True)
 
+        # TODO: apply configuration to remove/add Right AUX channel
+        recording.drop(["Right AUX"], axis=1, inplace=True)
+
         recording.to_pickle(os.path.join(current_recording_folder, "data.pkl"))
 
         recording_info.update(
