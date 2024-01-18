@@ -130,6 +130,7 @@ def plot_timeseries_dataframe(dataframe: pd.DataFrame, sample_rate, plot_fft=Tru
             amplitudes, frequency = get_FFT_from_timeseries(column, 256)
             ax = axs[i, 1]
             ax.plot(frequency, amplitudes)
+            ax.set_xlim(-0.1, 65)
 
             if i == 0:
                 ax.set_title("FFT")
